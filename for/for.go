@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+/*
+func main() {
+	s := "abc"
+
+	for i := 0; i < len(s); i++ {
+		fmt.Println(s[i])
+	}
+}
+*/
+func main() {
+	var i, j int
+
+	for i = 2; i < 100; i++ {
+		for j = 2; j <= (i / j); j++ {
+			if i%j == 0 {
+				break
+			}
+		}
+		if j > (i / j) {
+			fmt.Printf("%d 是素数\n", i)
+		}
+	}
+}
